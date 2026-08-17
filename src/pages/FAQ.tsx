@@ -16,7 +16,7 @@ const categories = [
 const scrollToCategory = (key: string) => {
   const element = document.getElementById(`faq-${key}`);
   if (element) {
-    const headerOffset = 100; // altura header fijo + tabs sticky
+    const headerOffset = 148; // header fijo (~72px) + tabs sticky top-16 (64px) + 12px padding
     const elementPosition = element.getBoundingClientRect().top + window.scrollY;
     const offsetPosition = elementPosition - headerOffset;
     window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
