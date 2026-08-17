@@ -6,12 +6,6 @@ import { Card, CardContent } from '../components/ui/Card';
 import { Container } from '../components/ui/Container';
 import { Section, SectionHeader } from '../components/ui/Section';
 
-const statusConfig = {
-  live: { label: 'En línea', variant: 'success' as const },
-  development: { label: 'En desarrollo', variant: 'info' as const },
-  concept: { label: 'Concepto', variant: 'secondary' as const },
-};
-
 export function Portfolio() {
   return (
     <Section id="proyectos" spacing="lg">
@@ -29,21 +23,14 @@ export function Portfolio() {
               <Card variant="elevated" padding="none" hover className="h-full overflow-hidden flex flex-col">
                 {/* Project Image */}
                 <div className="aspect-video relative bg-ink-100 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <div className="text-center max-w-sm">
-                      <div className="w-full h-48 bg-gradient-to-br from-brand-100 to-brand-200 rounded-none mb-4 flex items-center justify-center">
-                        <Icon name="Globe" size={48} className="text-brand-400" />
-                      </div>
-                      <h3 className="font-semibold text-ink-900 mb-1">{project.title}</h3>
-                      <p className="text-sm text-ink-600 mb-4">{project.description}</p>
-                      <Badge
-                        variant={statusConfig[project.status].variant}
-                        className="group-hover:scale-105 transition-transform"
-                      >
-                        {statusConfig[project.status].label}
-                      </Badge>
-                    </div>
-                  </div>
+                  {project.image && (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  )}
                   {/* Decorative overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
@@ -56,6 +43,12 @@ export function Portfolio() {
                 <CardContent className="p-6 space-y-4 flex-1">
                   <div className="flex items-center gap-2">
                     <span className="text-xs text-ink-500 uppercase tracking-wider">{project.category}</span>
+                    <Badge
+                      variant={project.status === 'live' ? 'success' : project.status === 'development' ? 'info' : 'secondary'}
+                      className="group-hover:scale-105 transition-transform"
+                    >
+                      {project.status === 'live' ? 'En línea' : project.status === 'development' ? 'En desarrollo' : 'Concepto'}
+                    </Badge>
                   </div>
                   <h3 className="text-lg font-semibold text-ink-900 group-hover:text-brand-600 transition-colors">
                     {project.title}

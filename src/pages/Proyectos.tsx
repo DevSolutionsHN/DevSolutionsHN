@@ -1,17 +1,11 @@
 import { getProjectsByStatus } from '../data/projects';
 import { buildWhatsAppUrl, whatsappMessages } from '../config/whatsapp';
 import { Icon } from '../components/ui/Icon';
-import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import { Card, CardContent } from '../components/ui/Card';
 import { Container } from '../components/ui/Container';
 import { Section, SectionHeader } from '../components/ui/Section';
 
-const statusConfig = {
-  live: { label: 'En línea', variant: 'success' as const, color: 'text-green-600' },
-  development: { label: 'En desarrollo', variant: 'info' as const, color: 'text-blue-600' },
-  concept: { label: 'Concepto', variant: 'secondary' as const, color: 'text-purple-600' },
-};
 
 export function Proyectos() {
   const liveProjects = getProjectsByStatus('live');
@@ -52,16 +46,14 @@ export function Proyectos() {
                 <article key={project.id}>
                   <Card variant="elevated" padding="none" hover className="h-full overflow-hidden flex flex-col group">
                     <div className="aspect-video relative bg-ink-100 overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center p-8">
-                        <div className="text-center max-w-sm">
-                          <div className="w-full h-48 bg-gradient-to-br from-brand-100 to-brand-200 rounded-none mb-4 flex items-center justify-center">
-                            <Icon name="Globe" size={48} className="text-brand-400" />
-                          </div>
-                          <h3 className="font-semibold text-ink-900 mb-1">{project.title}</h3>
-                          <p className="text-sm text-ink-600 mb-4">{project.description}</p>
-                          <Badge variant="success">En línea</Badge>
-                        </div>
-                      </div>
+                      {project.image && (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
                         <a
@@ -125,17 +117,26 @@ export function Proyectos() {
                 <article key={project.id}>
                   <Card variant="bordered" padding="none" hover className="h-full overflow-hidden flex flex-col border-2 border-dashed border-ink-300">
                     <div className="aspect-video relative bg-ink-100 overflow-hidden">
-                      <div className="absolute inset-0 flex items-center justify-center p-8">
-                        <div className="text-center max-w-sm">
-                          <div className="w-full h-48 bg-gradient-to-br from-ink-100 to-ink-200 rounded-none mb-4 flex items-center justify-center">
-                            <Icon name="Code" size={48} className="text-ink-400" />
-                          </div>
-                          <h3 className="font-semibold text-ink-900 mb-1">{project.title}</h3>
-                          <p className="text-sm text-ink-600 mb-4">{project.description}</p>
-                          <Badge variant={statusConfig[project.status].variant}>
-                            {statusConfig[project.status].label}
-                          </Badge>
-                        </div>
+                      {project.image && (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-2 group-hover:translate-y-0">
+                        {project.demoUrl && project.demoUrl !== '#' && (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-brand-600 hover:bg-brand-700 rounded-lg transition-colors w-full sm:w-auto"
+                          >
+                            Ver preview
+                          </a>
+                        )}
                       </div>
                     </div>
                     <CardContent className="p-6 space-y-4 flex-1">
@@ -152,11 +153,6 @@ export function Proyectos() {
                           <Badge variant="outline" size="sm">+{project.tags.length - 4}</Badge>
                         )}
                       </div>
-                      {project.demoUrl && project.demoUrl !== '#' && (
-                        <Button variant="outline" size="sm" className="mt-2 w-full sm:w-auto" href={project.demoUrl}>
-                          Ver preview
-                        </Button>
-                      )}
                     </CardContent>
                   </Card>
                 </article>
@@ -181,9 +177,12 @@ export function Proyectos() {
               Hablemos y construyamos algo juntos.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button variant="outline" size="lg" href="/contacto" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 hover:border-white/50">
+              <a
+                href="/contacto"
+                className="inline-flex items-center justify-center gap-1.5 px-6 py-3.5 text-base font-medium text-white border-2 border-white/30 rounded-lg transition-colors w-full sm:w-auto hover:bg-white/10 hover:border-white/50"
+              >
                 Empezar mi proyecto
-              </Button>
+              </a>
               <a
                 href={buildWhatsAppUrl(whatsappMessages.general)}
                 target="_blank"
