@@ -13,6 +13,16 @@ const categories = [
   { key: 'maintenance', label: 'Mantenimiento', icon: 'Settings' },
 ] as const;
 
+const scrollToCategory = (key: string) => {
+  const element = document.getElementById(`faq-${key}`);
+  if (element) {
+    const headerOffset = 100; // altura header fijo + tabs sticky
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerOffset;
+    window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+  }
+};
+
 export function FAQ() {
   return (
     <>
@@ -41,7 +51,8 @@ export function FAQ() {
               <button
                 key={cat.key}
                 data-category={cat.key}
-                className="faq-tab px-4 py-2 text-sm font-medium text-ink-600 hover:text-ink-900 hover:bg-ink-50 rounded-lg transition-colors"
+                onClick={() => scrollToCategory(cat.key)}
+                className="faq-tab px-4 py-2 text-sm font-medium text-ink-600 hover:text-ink-900 hover:bg-ink-50 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
               >
                 <Icon name={cat.icon} size={16} className="inline mr-2" />
                 {cat.label}

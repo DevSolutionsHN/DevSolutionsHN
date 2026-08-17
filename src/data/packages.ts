@@ -148,7 +148,7 @@ export const pricingDisclaimer = [
   'Los precios mostrados son referenciales ("desde") y aplican a proyectos base.',
   'El precio final depende del alcance real, funcionalidades, contenido y tiempos.',
   'No incluyen: dominio ($10-15/año), hosting optimizado si se requiere VPS/dedicado, pasarelas de pago, ni servicios de terceros.',
-  'Proyectos > $300: 50% al inicio y 50% al entregar. Proyectos ≤ $300: pago único.',
+  'Todos los proyectos: 50% al inicio y 50% al entregar y publicar.',
   'Mantenimiento: desde $15/mes (paquete Presencia); paquetes mayores según alcance.',
   'Todos los precios en USD. Pago en Honduras: transferencia bancaria, depósito o efectivo (según acuerdo).',
 ];
