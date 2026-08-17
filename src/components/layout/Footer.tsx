@@ -3,7 +3,6 @@ import { buildWhatsAppUrl } from '../../config/whatsapp';
 import { footerNav } from '../../data/navigation';
 import { siteConfig } from '../../config/siteConfig';
 import { Container } from '../ui/Container';
-import { Button } from '../ui/Button';
 
 export function Footer() {
   const whatsappUrl = buildWhatsAppUrl();
@@ -84,9 +83,12 @@ export function Footer() {
             <nav aria-label="Acciones rápidas">
               <ul className="space-y-3">
                 <li>
-                  <Button variant="outline" size="sm" className="w-full border-ink-700 text-ink-300 hover:border-ink-500 hover:text-white" href="/contacto">
+                  <a
+                    href="/contacto"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-2.5 text-sm font-medium text-ink-300 border border-ink-700 hover:border-ink-500 hover:text-white rounded-lg transition-colors"
+                  >
                     Solicitar cotización
-                  </Button>
+                  </a>
                 </li>
                 <li>
                   <Link
