@@ -103,7 +103,7 @@ export function Problem() {
             No se trata de elegir entre web o redes. Se trata de <strong className="text-ink-900">usar ambas bien</strong>.
           </p>
           <a href="/contacto" className="inline-flex items-center gap-2 text-brand-600 hover:text-brand-700 font-medium">
-            Hablemos de tu caso <Icon name="MessageSquare" size={18} strokeWidth={2.5} />
+            Hablemos de tu caso
           </a>
         </div>
       </Container>

@@ -26,8 +26,8 @@ export function Precios() {
               Precios claros, <span className="text-brand-600">sin sorpresas</span>
             </h1>
             <p className="text-lg text-ink-600 leading-relaxed">
-              Cada paquete tiene un precio base. El final se define tras hablar de tu proyecto.
-              Pagas 50% al iniciar y 50% al entregar (proyectos &gt; $300).
+              Cada paquete tiene precio base. El total exacto se define al conocer tu caso.
+              Pagas 50% al iniciar y 50% al entregar — sin letras chicas.
             </p>
           </div>
         </Container>
@@ -128,7 +128,7 @@ export function Precios() {
             </div>
             <div>
               <h2 className="text-2xl font-bold text-ink-900 mb-4 flex items-center gap-2">
-                <Icon name="MessageSquare" size={24} className="text-green-600" />
+                <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                 Lo que NO está incluido en los precios
               </h2>
               <ul className="space-y-3" role="list">
@@ -196,7 +196,7 @@ export function Precios() {
                   Consultar mantenimiento
                 </Button>
                 <Button variant="whatsapp" size="lg" href={buildWhatsAppUrl(whatsappMessages.maintenance)} target="_blank" rel="noopener noreferrer">
-                  <Icon name="MessageSquare" size={18} strokeWidth={2.5} />
+                  <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                   WhatsApp
                 </Button>
               </div>
@@ -279,7 +279,7 @@ export function Precios() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors w-full sm:w-auto"
               >
-                <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                 WhatsApp
               </a>
             </div>

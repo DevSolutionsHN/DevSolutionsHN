@@ -185,7 +185,7 @@ export function Contacto() {
                   </p>
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <Button variant="whatsapp" size="lg" href={buildWhatsAppUrl(whatsappMessages.general)} target="_blank" rel="noopener noreferrer">
-                      <Icon name="MessageSquare" size={18} strokeWidth={2.5} />
+                      <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                       Seguir por WhatsApp
                     </Button>
                     <button
@@ -317,16 +317,16 @@ export function Contacto() {
               <Card variant="bordered" padding="lg">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <div className="w-10 h-10 rounded-xl bg-green-100 flex items-center justify-center">
-                      <Icon name="MessageSquare" size={20} className="text-green-600" />
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center overflow-hidden">
+                      <img src="/whatsapp.png" alt="" className="w-full h-full object-cover" aria-hidden="true" />
                     </div>
                     WhatsApp directo
                   </CardTitle>
                   <CardDescription>La forma más rápida. Respondemos en horas.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button variant="whatsapp" fullWidth size="lg" href={buildWhatsAppUrl(whatsappMessages.general)} target="_blank" rel="noopener noreferrer">
-                    <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+                  <Button variant="whatsapp" fullWidth size="md" href={buildWhatsAppUrl(whatsappMessages.general)} target="_blank" rel="noopener noreferrer">
+                    <img src="/whatsapp.png" alt="" className="w-5 h-5" aria-hidden="true" />
                     Abrir WhatsApp
                   </Button>
                   <p className="text-sm text-ink-500 text-center">
@@ -340,7 +340,9 @@ export function Contacto() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <div className="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center">
-                      <Icon name="Mail" size={20} className="text-brand-600" />
+                      <svg className="w-6 h-6 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
                     </div>
                     Correo electrónico
                   </CardTitle>
@@ -374,11 +376,11 @@ export function Contacto() {
               )}
 
               {/* Hours */}
-              <Card variant="ghost" padding="lg">
+              <Card variant="bordered" padding="lg">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
-                    <div className="w-10 h-10 rounded-xl bg-ink-100 flex items-center justify-center">
-                      <Icon name="Clock" size={20} className="text-ink-600" />
+                    <div className="w-10 h-10 rounded-xl bg-brand-100 flex items-center justify-center">
+                      <Icon name="Calendar" size={20} className="text-brand-600" />
                     </div>
                     Horario de atención
                   </CardTitle>
@@ -411,7 +413,7 @@ export function Contacto() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
             >
-              <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+              <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
               Preguntar por WhatsApp
             </a>
           </div>

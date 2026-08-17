@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { buildWhatsAppUrl } from '../../config/whatsapp';
 import { mainNav } from '../../data/navigation';
-import { Icon } from '../ui/Icon';
 import { Container } from '../ui/Container';
 import { siteConfig } from '../../config/siteConfig';
 import { cn } from '../../lib/cn';
@@ -48,21 +47,12 @@ export function Header() {
               className="flex items-center gap-2 text-ink-900 hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 rounded-md"
               aria-label={`${siteConfig.name} - Inicio`}
             >
-              <svg
-                className="w-8 h-8 text-brand-600"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect width="32" height="32" rx="8" fill="currentColor" />
-                <path
-                  d="M8 12h16M8 16h12M8 20h8"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <img
+                src="/logo.svg"
+                alt={siteConfig.name}
+                className="w-12 h-12"
+                loading="eager"
+              />
               <span className="font-bold text-xl tracking-tight hidden sm:block">
                 DevSolutionsHN
               </span>
@@ -97,7 +87,7 @@ export function Header() {
                 className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
                 aria-label="Contactar por WhatsApp"
               >
-                <Icon name="MessageSquare" size={16} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-5 h-5" aria-hidden="true" />
                 WhatsApp
               </a>
             </div>
@@ -111,7 +101,7 @@ export function Header() {
               aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
             >
               {mobileMenuOpen ? (
-                <Icon name="MessageSquare" size={24} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-5 h-5" aria-hidden="true" />
               ) : (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
@@ -158,7 +148,7 @@ export function Header() {
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl text-lg font-medium text-white bg-green-600 hover:bg-green-700 transition-colors"
                     >
-                      <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+                      <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                       WhatsApp
                     </a>
                   </div>
@@ -174,11 +164,11 @@ export function Header() {
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-14 h-14 rounded-full bg-green-600 hover:bg-green-700 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 animate-in slide-in-from-bottom-4 duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 lg:bottom-8 lg:right-8"
+        className="fixed bottom-6 right-6 z-[100] flex items-center justify-center w-16 h-16 rounded-full bg-green-600 hover:bg-green-700 shadow-lg transition-all duration-300 hover:shadow-xl hover:scale-105 animate-in slide-in-from-bottom-4 duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 lg:bottom-8 lg:right-8"
         aria-label="Contactar por WhatsApp"
         style={{ position: 'fixed' }}
       >
-        <Icon name="MessageSquare" size={28} strokeWidth={2.5} className="text-white" />
+        <img src="/whatsapp.png" alt="" className="w-8 h-8" aria-hidden="true" />
       </a>
     </>
   );

@@ -43,7 +43,7 @@ export function Hero() {
                 className="hidden sm:flex items-center justify-center gap-2 px-5 py-2.5 text-base font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
                 aria-label="Contactar por WhatsApp"
               >
-                <Icon name="MessageSquare" size={18} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                 WhatsApp
               </a>
             </div>
@@ -82,21 +82,13 @@ export function Hero() {
                 </div>
               </div>
               <div className="aspect-[4/3] bg-ink-50 relative overflow-hidden">
-                {/* Project preview placeholder */}
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                  <div className="text-center max-w-sm">
-                    <div className="w-full h-32 bg-gradient-to-br from-brand-100 to-brand-200 rounded-xl mb-4 flex items-center justify-center">
-                      <Icon name="Globe" size={48} className="text-brand-400" />
-                    </div>
-                    <h3 className="font-semibold text-ink-900 mb-1">Conoce San Luis</h3>
-                    <p className="text-sm text-ink-600 mb-4">
-                      Experiencia web interactiva presentando la identidad y cultura de San Luis, Honduras.
-                    </p>
-                    <span className="inline-block px-3 py-1 text-xs font-medium bg-brand-100 text-brand-700 rounded-full">
-                      Proyecto real — Ver en vivo
-                    </span>
-                  </div>
-                </div>
+                {/* Project preview - actual screenshot */}
+                <img
+                  src="/projects/conocesanluis-og.jpg"
+                  alt="Conoce San Luis - Experiencia web interactiva"
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
                 {/* Subtle decorative elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                   <div className="absolute -top-20 -right-20 w-72 h-72 bg-brand-200/30 rounded-full blur-3xl" aria-hidden="true" />

@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { buildWhatsAppUrl } from '../../config/whatsapp';
 import { footerNav } from '../../data/navigation';
 import { siteConfig } from '../../config/siteConfig';
-import { Icon } from '../ui/Icon';
 import { Container } from '../ui/Container';
 import { Button } from '../ui/Button';
 
@@ -20,21 +19,12 @@ export function Footer() {
               className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 rounded-md mb-4 inline-flex"
               aria-label={`${siteConfig.name} - Inicio`}
             >
-              <svg
-                className="w-8 h-8 text-brand-400"
-                viewBox="0 0 32 32"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <rect width="32" height="32" rx="8" fill="currentColor" />
-                <path
-                  d="M8 12h16M8 16h12M8 20h8"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <img
+                src="/logo.svg"
+                alt={siteConfig.name}
+                className="w-12 h-12"
+                loading="lazy"
+              />
               <span className="font-bold text-xl tracking-tight">DevSolutionsHN</span>
             </Link>
             <p className="text-ink-400 text-sm leading-relaxed max-w-xs mb-6">
@@ -48,7 +38,7 @@ export function Footer() {
                 className="flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
                 aria-label="Contactar por WhatsApp"
               >
-                <Icon name="MessageSquare" size={18} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-5 h-5" aria-hidden="true" />
                 WhatsApp
               </a>
               <a
@@ -121,7 +111,7 @@ export function Footer() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-green-400 hover:text-green-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 rounded"
                   >
-                    <Icon name="MessageSquare" size={16} strokeWidth={2.5} />
+                    <img src="/whatsapp.png" alt="" className="w-5 h-5" aria-hidden="true" />
                     WhatsApp
                   </a>
                 </li>

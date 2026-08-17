@@ -13,6 +13,7 @@ import {
   Zap,
   Tag,
   MinusCircle,
+  Calendar,
   type LucideIcon,
 } from 'lucide-react';
 import { cn } from '../../lib/cn';
@@ -32,6 +33,7 @@ const iconMap: Record<string, LucideIcon> = {
   Zap,
   Tag,
   MinusCircle,
+  Calendar,
 };
 
 export interface IconProps {

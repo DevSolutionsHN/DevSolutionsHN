@@ -117,22 +117,22 @@ export function Proceso() {
               <tbody className="divide-y divide-ink-100">
                 <tr>
                   <td className="py-4 font-medium text-ink-900">Página web (Paquete Presencia)</td>
-                  <td className="py-4 text-center text-ink-600">1-2 semanas</td>
+                  <td className="py-4 text-center text-ink-600">1-3 semanas</td>
                   <td className="py-4 text-center text-ink-600">Diseño → Desarrollo → Revisión</td>
                 </tr>
                 <tr className="bg-ink-50/50">
                   <td className="py-4 font-medium text-ink-900">Web empresarial (Paquete Profesional)</td>
-                  <td className="py-4 text-center text-ink-600">2-3 semanas</td>
+                  <td className="py-4 text-center text-ink-600">3-5 semanas</td>
                   <td className="py-4 text-center text-ink-600">Wireframes → Diseño → Desarrollo → Revisión</td>
                 </tr>
                 <tr>
                   <td className="py-4 font-medium text-ink-900">Tienda online</td>
-                  <td className="py-4 text-center text-ink-600">3-4 semanas</td>
+                  <td className="py-4 text-center text-ink-600">5-6 semanas</td>
                   <td className="py-4 text-center text-ink-600">Estructura → Catálogo → Carrito → Admin → Pruebas</td>
                 </tr>
                 <tr className="bg-ink-50/50">
                   <td className="py-4 font-medium text-ink-900">Sistema personalizado</td>
-                  <td className="py-4 text-center text-ink-600">4-8 semanas</td>
+                  <td className="py-4 text-center text-ink-600">6-8 semanas</td>
                   <td className="py-4 text-center text-ink-600">Análisis → Diseño → Backend → Frontend → Pruebas → Entrega</td>
                 </tr>
               </tbody>
@@ -182,7 +182,7 @@ export function Proceso() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors w-full sm:w-auto"
               >
-                <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                 WhatsApp
               </a>
             </div>

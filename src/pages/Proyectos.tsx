@@ -189,7 +189,7 @@ export function Proyectos() {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors w-full sm:w-auto"
               >
-                <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+                <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
                 WhatsApp
               </a>
             </div>

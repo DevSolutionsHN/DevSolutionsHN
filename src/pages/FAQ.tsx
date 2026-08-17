@@ -81,7 +81,7 @@ export function FAQ() {
                     <div key={faq.id} className="group">
                       <Card variant="bordered" padding="md" className="group-hover:border-brand-300 transition-colors">
                         <dt className="font-semibold text-ink-900 flex items-start gap-3">
-                          <Icon name="MessageSquare" size={20} className="text-brand-400 flex-shrink-0 mt-0.5 group-hover:text-brand-600 transition-colors" />
+                          <img src="/whatsapp.png" alt="" className="w-6 h-6 text-brand-400 flex-shrink-0 mt-0.5 group-hover:text-brand-600 transition-colors" aria-hidden="true" />
                           {faq.question}
                         </dt>
                         <dd className="mt-3 text-ink-600 leading-relaxed pl-7 border-l border-ink-200">
@@ -102,7 +102,7 @@ export function FAQ() {
         <Container size="lg">
           <div className="text-center max-w-2xl mx-auto">
             <div className="w-16 h-16 rounded-2xl bg-ink-800 border border-ink-700 flex items-center justify-center mx-auto mb-6">
-              <Icon name="MessageSquare" size={32} className="text-green-500" />
+              <img src="/whatsapp.png" alt="" className="w-8 h-8" aria-hidden="true" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               ¿Tu pregunta no está aquí?
@@ -116,7 +116,7 @@ export function FAQ() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-medium text-white bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
             >
-              <Icon name="MessageSquare" size={20} strokeWidth={2.5} />
+              <img src="/whatsapp.png" alt="" className="w-6 h-6" aria-hidden="true" />
               Preguntar por WhatsApp
             </a>
           </div>
